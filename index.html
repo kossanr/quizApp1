@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+  <title>Who said it quiz</title>
   <head>
     <meta charset="UTF-8" />
-    <title>Who said it quiz</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap"
+      rel="stylesheet"
+    />
+
     <meta
       name="description"
       type="A quiz app that challenges the user's knowledge on quotes."
@@ -14,10 +19,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main role="main" class="container">
+    <main role="main">
       <!-- START page -->
       <h1>Who said it?</h1>
-      <section>
+      <section class="quiz-info">
         <ul>
           <li class="question-score">
             Question: <span class="currentQ">0</span>/<span
@@ -27,52 +32,41 @@
           <li class="question-score">Score: <span class="score">0</span></li>
         </ul>
       </section>
-      <div class="start">
-        <h2>Who spoke these inspiring words?</h2>
-        <a href="#"> Start Quiz</a>
-      </div>
+      <section class="main-quiz">
+        <div class="start">
+          <h2>Who spoke these inspiring words?</h2>
+          <button class="start-quiz">START</button>
+        </div>
 
-      <!--  QUIZ page -->
+        <!--  QUIZ page -->
 
-      <form class="quiz">
-        <fieldset>
-          <div>
-            <h2>Q title</h2>
-            <ul>
-              <li>choice 1</li>
-              <li>choice 2</li>
-              <li>choice 3</li>
-              <li>choice 4</li>
-            </ul>
-            <a href="#">Submit</a>
-          </div>
-        </fieldset>
-      </form>
+        <form class="quiz">
+          <fieldset>
+            <div>
+              <h2>Q title</h2>
+              <ul>
+                <li>choice 1</li>
+                <li>choice 2</li>
+                <li>choice 3</li>
+              </ul>
+              <button class="submit-button">submit</button>
+            </div>
+          </fieldset>
+        </form>
 
-      <!-- CORRECT -->
-      <div class="correct">
-        <h2>Correct text</h2>
+        <!-- CORRECT -->
+        <div class="correct"></div>
+        <!-- INCORRECT -->
+        <div class="incorrect"></div>
 
-        <a href="#"> Next question </a>
-      </div>
-      <!-- INCORRECT -->
-      <div class="incorrect">
-        <p>
-          Your answer is wrong...<span class="correctAnswer"
-            >correct answer here</span
-          >
-        </p>
-        <a href="#"> Next Question</a>
-      </div>
+        <!-- SUMMARY page-->
 
-      <!-- SUMMARY page-->
-
-      <div class="summary">
-        <h2>How'd you do?</h2>
-        <p>Congrats you scored x out of y correct!</p>
-        <a href="#"> Try again! </a>
-      </div>
-
+        <div class="summary">
+          <h3>How'd you do?</h3>
+          <p>Congrats you scored x out of y correct!</p>
+          <button class="restart-quiz">Try again!</button>
+        </div>
+      </section>
       <script
         type="text/javascript"
         src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

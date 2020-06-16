@@ -1,43 +1,71 @@
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
   font-size: 20px;
   font-weight: normal;
   text-decoration: none;
   font-family: "Segoe UI", Arial, sans-serif;
   text-align: center;
+  /* display: flex; */
 }
 
 h1 {
+  font-family: "MuseoModerno", cursive;
   text-align: center;
-  font-size: 28px;
+  font-size: 50px;
   color: #db5d47;
-  padding: 35px;
 }
 
-a {
-  color: black;
-  margin-top: 30px;
+h2,
+.incorrect,
+.correct {
+  padding: 20px;
 }
-a:hover {
-  text-decoration: underline;
+
+.incorrect {
+  padding: 20px;
+}
+
+fieldset {
+  width: 50%;
+  min-width: 300px;
+  display: inline-block;
+  border: solid 3px #04adbf;
+}
+
+button {
+  font-family: "MuseoModerno", cursive;
   color: #db5d47;
+  border: solid 1px #db5d47;
+  background-color: white;
+  padding: 7px;
+  border-radius: 8%;
+  display: inline;
 }
-.quiz {
-  border-color: lightgray 1px;
-  border-radius: 5px;
+
+button:hover {
+  background-color: #db5d47;
+  color: white;
+  border: solid white 1px;
 }
+
 .quiz,
-.summary {
+.summary,
+.quiz-info {
   display: none;
 }
 
-.question-score {
-  list-style: none;
+.question-score,
+.numQuestions,
+.score,
+.currentQ {
   display: inline;
+  font-size: 15px;
 }
-.quiz ul {
+.quiz-info {
+  margin-top: -32px;
+}
+
+ul {
   list-style: none;
   padding: 0;
 }
@@ -45,12 +73,25 @@ a:hover {
 .quiz li {
   cursor: pointer;
   margin-bottom: 8px;
+  justify-content: center;
+  display: flex;
 }
 
 .quiz li:hover {
   color: #04adbf;
 }
 
+.quiz li input {
+  display: none;
+}
+
 .selected {
   color: #04adbf;
+}
+
+button.next-question {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
 }
