@@ -9,7 +9,7 @@ let questions = [
   {
     title: `"How wonderful it is that nobody need wait a single moment before starting to improve the world."`,
     answers: ["Clara Barton", "Helen Keller", "Anne Frank"],
-    correct: 0,
+    correct: 2,
   },
   {
     title: `"The two most important days in your life are the day you are born and the day you find out why."`,
@@ -40,7 +40,7 @@ let questions = [
   {
     title: `“It takes a great deal of bravery to stand up to our enemies, but just as much to stand up to our friends.”`,
     answers: ["Albus Dumbledore", "Maya Angelou", "Pam Beesly"],
-    correct: 1,
+    correct: 0,
   },
 ];
 
