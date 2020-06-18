@@ -38,7 +38,7 @@ button {
   border: solid 1px #db5d47;
   background-color: white;
   padding: 7px;
-  border-radius: 8%;
+
   display: inline;
 }
 
@@ -79,10 +79,6 @@ ul {
 
 .quiz li:hover {
   color: #04adbf;
-}
-
-.quiz li input {
-  display: none;
 }
 
 .selected {
