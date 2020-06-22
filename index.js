@@ -111,21 +111,22 @@ function checkAnswer(guess) {
 
 function correctAnswer() {
   $(".quiz, .incorrect").hide();
-  $(".correct")
-    .show()
-    .html(
-      `<h3>Your answer is correct!</h3> <button class="next-question"> next question </button>`
-    );
+  $(".correct").show().html(getCorrectText());
 }
 
+function getCorrectText() {
+  return `<h3>Your answer is correct!</h3> <button class="next-question"> next question </button>`;
+}
 function incorrectAnswer() {
-  const { correct, answers } = STORE.questions[STORE.currentQuestion];
+  //is this needed if I moved it to getIncorrectTect? // const { correct, answers } = STORE.questions[STORE.currentQuestion];
   $(".quiz").hide();
-  $(".incorrect")
-    .show()
-    .html(
-      `Wrong! The correct answer is ${answers[correct]} <button class="next-question"> next question </button>`
-    );
+  $(".incorrect").show().html(getIncorrectText());
+}
+
+function getIncorrectText() {
+  const { correct, answers } = STORE.questions[STORE.currentQuestion];
+  return `Wrong! The correct answer is ${answers[correct]} 
+  <button class="next-question"> next question </button>`;
 }
 
 function nextQuestion() {
